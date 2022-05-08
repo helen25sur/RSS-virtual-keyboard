@@ -21,6 +21,7 @@ main.append(title);
 
 const wrapperTextarea = createElement('div', 'wrapper-textarea');
 const textarea = createElement('textarea', 'keyboard-text');
+textarea.setAttribute('autofocus', 'true');
 wrapperTextarea.append(textarea);
 
 const wrapperKeyboard = createElement('div', 'wrapper-keyboard');

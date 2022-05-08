@@ -37,7 +37,9 @@ h1 {
       display: block;
       width: 100%;
       height: 150px;
+      padding: 0.5em;
       background-color: lighten($font-color, 85%);
+      font-size: 1.5em;
     }
   }
 
@@ -64,6 +66,20 @@ h1 {
 
         &.active {
           background-color: lighten($font-color, 65%);
+          // transition: all 0.5s;
+        }
+
+        &.remove {
+          animation: animation-keys 0.5s reverse;
+        }
+
+        @keyframes animation-keys {
+          0% {
+            background-color: lighten($font-color, 85%);
+          }
+          100% {
+            background-color: lighten($font-color, 65%);
+          }
         }
       }
 
@@ -79,7 +95,7 @@ h1 {
         width: 131px;
       }
       .key-space {
-        width: 25.5%;
+        width: 32%;
       }
     }
   }
