@@ -61,24 +61,32 @@ h1 {
         min-width: 57px;
         height: 57px;
         border: 1px solid $font-color;
+        border-radius: 6px;
         background-color: lighten($font-color, 85%);
         font-weight: bold;
+        text-transform: lowercase;
+        box-shadow: inset -3px -3px 3px;
 
         &.active {
           background-color: lighten($font-color, 65%);
-          // transition: all 0.5s;
         }
 
         &.remove {
           animation: animation-keys 0.5s reverse;
         }
 
+        &.text-transform {
+          text-transform: uppercase;
+        }
+
         @keyframes animation-keys {
           0% {
             background-color: lighten($font-color, 85%);
+            box-shadow: inset -3px -3px 3px;
           }
           100% {
             background-color: lighten($font-color, 65%);
+            box-shadow: inset 3px 3px 3px;
           }
         }
       }

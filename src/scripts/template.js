@@ -1,5 +1,4 @@
 import KEYS from './keys.json';
-console.log(KEYS);
 
 function createElement(name, classNames) {
   const element = document.createElement(name);
