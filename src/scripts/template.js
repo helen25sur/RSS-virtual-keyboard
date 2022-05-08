@@ -1,5 +1,6 @@
 import KEYS from './keys.json';
 
+
 function createElement(name, classNames) {
   const element = document.createElement(name);
   if (Array.isArray(classNames)) {
@@ -28,14 +29,16 @@ const keyboard = createElement('div', 'keyboard');
 wrapperKeyboard.append(keyboard);
 
 for (const value in KEYS) {
+  let lang = localStorage.getItem('lang');
   const line = createElement('div', 'keyboard-line');
   KEYS[value].forEach(item => {
     const key = createElement('div', item.classList);
     key.dataset.valueEn = item.datasetValueEn;
     key.dataset.valueGr = item.datasetValueGr !== undefined ? item.datasetValueGr : item.datasetValueEn;
+    // key.dataset.value = item[`keyValue${lang}`];
 
     const keyV = createElement('span', 'key-value');
-    keyV.innerText = item.keyValue;
+    keyV.innerText = item[`keyValue${lang}`];
     key.append(keyV);
     line.append(key);
   })

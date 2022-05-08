@@ -40,6 +40,9 @@ h1 {
       padding: 0.5em;
       background-color: lighten($font-color, 85%);
       font-size: 1.5em;
+      color: $font-color;
+      box-shadow: inset -3px -3px 8px;
+      border-radius: 8px;
     }
   }
 

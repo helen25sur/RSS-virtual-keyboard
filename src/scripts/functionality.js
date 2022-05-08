@@ -1,3 +1,6 @@
+import KEYS from './keys.json';
+
+// create localStorage
 const storage = window.localStorage;
 if (storage.getItem('lang') === null) {
   storage.setItem('lang', 'En');
@@ -7,6 +10,7 @@ const keys = document.querySelectorAll('.key');
 const textarea = document.body.querySelector('.keyboard-text');
 const keyboard = document.body.querySelector('.keyboard');
 
+// keyboard's events
 window.addEventListener('keydown', (event) => {
   let lang = storage.getItem('lang');
   event.preventDefault();
@@ -70,6 +74,7 @@ window.addEventListener('keydown', (event) => {
       }
     }
 
+    // switcher languages
     if (k.dataset[valueDataset] === 'AltLeft' && event.ctrlKey && event.altKey) {
       if (storage.getItem('lang') === 'En') {
         storage.removeItem('lang');
@@ -78,8 +83,17 @@ window.addEventListener('keydown', (event) => {
         storage.removeItem('lang');
         storage.setItem('lang', 'En');
       }
+      keys.forEach(item => {
+        lang = storage.getItem('lang');
+        for (const line in KEYS) {
+          KEYS[line].forEach(symbol => {
+            if (symbol['datasetValueEn'] === item.dataset.valueEn) {
+              item.querySelector('.key-value').innerText = symbol[`keyValue${lang}`];
+            }
+          })
+        }
+      })
     }
-
   })
 });
 
@@ -99,6 +113,7 @@ window.addEventListener('keyup', (event) => {
   })
 });
 
+// mouse's events
 keyboard.addEventListener('mousedown', (event) => {
   let lang = storage.getItem('lang');
   const target = event.target.closest('.key[data-value-en]');
