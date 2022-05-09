@@ -4,78 +4,91 @@
       "keyValueEn": "`",
       "keyValueGr": "`",
       "datasetValueEn": "Backquote",
+      "additionalValue": "~",
       "classList": "key"
     },
     {
       "keyValueEn": "1",
       "keyValueGr": "1",
       "datasetValueEn": "Digit1",
+      "additionalValue": "!",
       "classList": "key"
     },
     {
       "keyValueEn": "2",
       "keyValueGr": "2",
       "datasetValueEn": "Digit2",
+      "additionalValue": "@",
       "classList": "key"
     },
     {
       "keyValueEn": "3",
       "keyValueGr": "3",
       "datasetValueEn": "Digit3",
+      "additionalValue": "#",
       "classList": "key"
     },
     {
       "keyValueEn": "4",
       "keyValueGr": "4",
       "datasetValueEn": "Digit4",
+      "additionalValue": "$",
       "classList": "key"
     },
     {
       "keyValueEn": "5",
       "keyValueGr": "5",
       "datasetValueEn": "Digit5",
+      "additionalValue": "%",
       "classList": "key"
     },
     {
       "keyValueEn": "6",
       "keyValueGr": "6",
       "datasetValueEn": "Digit6",
+      "additionalValue": "^",
       "classList": "key"
     },
     {
       "keyValueEn": "7",
       "keyValueGr": "7",
       "datasetValueEn": "Digit7",
+      "additionalValue": "&",
       "classList": "key"
     },
     {
       "keyValueEn": "8",
       "keyValueGr": "8",
       "datasetValueEn": "Digit8",
+      "additionalValue": "*",
       "classList": "key"
     },
     {
       "keyValueEn": "9",
       "keyValueGr": "9",
       "datasetValueEn": "Digit9",
+      "additionalValue": "(",
       "classList": "key"
     },
     {
       "keyValueEn": "0",
       "keyValueGr": "0",
       "datasetValueEn": "Digit0",
+      "additionalValue": ")",
       "classList": "key"
     },
     {
       "keyValueEn": "-",
       "keyValueGr": "-",
       "datasetValueEn": "Minus",
+      "additionalValue": "_",
       "classList": "key"
     },
     {
       "keyValueEn": "=",
       "keyValueGr": "=",
       "datasetValueEn": "Equal",
+      "additionalValue": "+",
       "classList": "key"
     },
     {
@@ -158,18 +171,21 @@
       "keyValueEn": "[",
       "keyValueGr": "[",
       "datasetValueEn": "BracketLeft",
+      "additionalValue": "{",
       "classList": "key"
     },
     {
       "keyValueEn": "]",
       "keyValueGr": "]",
       "datasetValueEn": "BracketRight",
+      "additionalValue": "}",
       "classList": "key"
     },
     {
       "keyValueEn": "\\",
       "keyValueGr": "\\",
       "datasetValueEn": "Backslash",
+      "additionalValue": "|",
       "classList": "key"
     },
     {
@@ -244,12 +260,14 @@
       "keyValueEn": ";",
       "keyValueGr": ";",
       "datasetValueEn": "Semicolon",
+      "additionalValue": ":",
       "classList": "key"
     },
     {
       "keyValueEn": "'",
       "keyValueGr": "'",
       "datasetValueEn": "Quote",
+      "additionalValue": "\"",
       "classList": "key"
     },
     {
@@ -312,18 +330,21 @@
       "keyValueEn": ",",
       "keyValueGr": ",",
       "datasetValueEn": "Comma",
+      "additionalValue": "<",
       "classList": "key"
     },
     {
       "keyValueEn": ".",
       "keyValueGr": ".",
       "datasetValueEn": "Period",
+      "additionalValue": ">",
       "classList": "key"
     },
     {
       "keyValueEn": "/",
       "keyValueGr": "/",
       "datasetValueEn": "Slash",
+      "additionalValue": "?",
       "classList": "key"
     },
     {

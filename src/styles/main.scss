@@ -57,6 +57,7 @@ h1 {
       justify-content: center;
       
       .key {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,6 +108,13 @@ h1 {
       }
       .key-space {
         width: 32%;
+      }
+
+      .special-symbol {
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        font-size: 0.8em;
       }
     }
   }

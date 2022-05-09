@@ -10,68 +10,94 @@ const keys = document.querySelectorAll('.key');
 const textarea = document.body.querySelector('.keyboard-text');
 const keyboard = document.body.querySelector('.keyboard');
 
+function behaviorKeys(forSwitch, item, textarea) {
+  const selectStart = textarea.selectionStart;
+  if (event.shiftKey) {
+    item.classList.add('text-transform');
+  } else {
+    item.classList.remove('text-transform');
+  }
+  switch (forSwitch) {
+    case 'Backspace':
+      textarea.value = textarea.value.substr(0, selectStart - 1) + textarea.value.substr(selectStart);
+      textarea.selectionEnd = selectStart - 1;
+      break;
+    case 'Delete':
+      textarea.value = textarea.value.substr(0, selectStart) + textarea.value.substr(selectStart + 1);
+      textarea.selectionEnd = selectStart;
+      break;
+    case 'Space':
+      textarea.value = textarea.value.substr(0, selectStart) + ' ' + textarea.value.substr(selectStart);
+      textarea.selectionEnd = selectStart + 1;
+      break;
+    case 'Tab':
+      textarea.value = textarea.value.substr(0, selectStart) + '\t' + textarea.value.substr(selectStart);
+      textarea.selectionEnd = selectStart + 1;
+      break;
+    case 'ShiftLeft':
+    case 'ShiftRight':
+    case 'ControlLeft':
+    case 'MetaLeft':
+    case 'AltLeft':
+    case 'AltRight':
+    case 'ControlRight':
+    case 'ArrowUp':
+    case 'ArrowDown':
+    case 'ArrowRight':
+    case 'ArrowLeft':
+      textarea.value += '';
+      break;
+    case 'CapsLock':
+      keys.forEach(keyItem => {
+        keyItem.classList.toggle('text-transform');
+        if (keyItem.classList.contains('text-transform')) {
+          keys.forEach(key => {
+            key.querySelector('span').innerText.toUpperCase();
+          });
+        } else {
+          keys.forEach(key => {
+            key.querySelector('span').innerText.toLowerCase();
+          });
+        }
+      });
+      break;
+    case 'Enter':
+      textarea.value = textarea.value.substr(0, textarea.selectionStart) + '\n' + textarea.value.substr(textarea.selectionStart);
+      textarea.selectionEnd = selectStart + 1;
+      break;
+
+    default:
+      if (item.querySelector('.special-symbol') !== null && event.shiftKey) {
+        textarea.value = textarea.value.substr(0, textarea.selectionStart) + item.querySelector('.special-symbol').innerText + textarea.value.substr(textarea.selectionStart);
+        textarea.selectionEnd = selectStart + 1;
+      } else {
+        textarea.value = textarea.value.substr(0, textarea.selectionStart) + item.querySelector('.key-value').innerText + textarea.value.substr(textarea.selectionStart);
+        textarea.selectionEnd = selectStart + 1;
+      }
+      break;
+  }
+}
 // keyboard's events
 window.addEventListener('keydown', (event) => {
   let lang = storage.getItem('lang');
-  event.preventDefault();
+  if (event.code !== 'ArrowUp' &&
+    event.code !== 'ArrowDown' &&
+    event.code !== 'ArrowLeft' &&
+    event.code !== 'ArrowRight') {
+    event.preventDefault();
+  }
   textarea.focus();
   const valueDataset = `value${lang}`;
-  console.log(lang);
-  console.log(event);
   keys.forEach(k => {
     if (k.dataset[valueDataset] === event.code) {
       k.classList.add('active');
       k.classList.remove('remove');
 
-      if (event.shiftKey) {
-        if (k.classList.contains('key-shift')) {
-          k.querySelector('span').innerText.toLowerCase();
-        } else {
-          k.classList.add('text-transform');
-        }
-      }
-      console.log(event.code, k);
-      switch (event.code) {
-        case 'Backspace':
-          textarea.value = textarea.value.slice(0, -1);
-          break;
-        case 'Space':
-          textarea.value += ' ';
-          break;
-        case 'Tab':
-          textarea.value += '\t';
-          break;
-        case 'ShiftLeft':
-        case 'ShiftRight':
-        case 'ControlLeft':
-        case 'MetaLeft':
-        case 'AltLeft':
-        case 'AltRight':
-        case 'ControlRight':
-          textarea.value += '';
-          break;
-        case 'CapsLock':
-          keys.forEach(keyItem => {
-            keyItem.classList.toggle('text-transform');
-            if (keyItem.classList.contains('text-transform')) {
-              keys.forEach(key => {
-                key.querySelector('span').innerText.toUpperCase();
-              });
-            } else {
-              keys.forEach(key => {
-                key.querySelector('span').innerText.toLowerCase();
-              });
-            }
-          });
-          break;
-        case 'Enter':
-          textarea.value += '\n';
-          break;
+      // if (event.shiftKey) {
+      //   k.classList.add('text-transform');
+      // }
 
-        default:
-          textarea.value += k.querySelector('span').innerText;
-          break;
-      }
+      behaviorKeys(event.code, k, textarea);
     }
 
     // switcher languages
@@ -124,48 +150,8 @@ keyboard.addEventListener('mousedown', (event) => {
       k.classList.add('active');
       k.classList.remove('remove');
 
-      switch (target.dataset[valueDataset]) {
-        case 'Backspace':
-          textarea.value = textarea.value.slice(0, -1);
-          break;
-        case 'Space':
-          textarea.value += ' ';
-          break;
-        case 'Tab':
-          textarea.value += '\t';
-          break;
-        case 'Delete':
-        case 'ShiftLeft':
-        case 'ShiftRight':
-        case 'ControlLeft':
-        case 'MetaLeft':
-        case 'AltLeft':
-        case 'AltRight':
-        case 'ControlRight':
-          textarea.value += '';
-          break;
-        case 'CapsLock':
-          keys.forEach(keyItem => {
-            keyItem.classList.toggle('text-transform');
-            if (keyItem.classList.contains('text-transform')) {
-              keys.forEach(key => {
-                key.querySelector('span').innerText.toUpperCase();
-              });
-            } else {
-              keys.forEach(key => {
-                key.querySelector('span').innerText.toLowerCase();
-              });
-            }
-          });
-          break;
-        case 'Enter':
-          textarea.value += '\n';
-          break;
+      behaviorKeys(target.dataset[valueDataset], k, textarea);
 
-        default:
-          textarea.value += k.querySelector('span').innerText;
-          break;
-      }
 
     } else {
       k.classList.remove('active');

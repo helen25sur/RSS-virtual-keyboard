@@ -35,10 +35,12 @@ for (const value in KEYS) {
     const key = createElement('div', item.classList);
     key.dataset.valueEn = item.datasetValueEn;
     key.dataset.valueGr = item.datasetValueGr !== undefined ? item.datasetValueGr : item.datasetValueEn;
-    // key.dataset.value = item[`keyValue${lang}`];
 
     const keyV = createElement('span', 'key-value');
     keyV.innerText = item[`keyValue${lang}`];
+    if (item.additionalValue !== undefined) {
+      key.innerHTML += `<span class="special-symbol">${item.additionalValue}</span>`;
+    }
     key.append(keyV);
     line.append(key);
   })
