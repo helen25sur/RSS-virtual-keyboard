@@ -78,12 +78,11 @@ function behaviorKeys(forSwitch, item, textarea) {
   }
 }
 // keyboard's events
+const defaultKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'Escape', 'Numpad9', 'Numpad3', 'Numpad7', 'Numpad1'];
+
 window.addEventListener('keydown', (event) => {
   let lang = storage.getItem('lang');
-  if (event.code !== 'ArrowUp' &&
-    event.code !== 'ArrowDown' &&
-    event.code !== 'ArrowLeft' &&
-    event.code !== 'ArrowRight') {
+  if (!defaultKeys.includes(event.code)) {
     event.preventDefault();
   }
   textarea.focus();
@@ -92,10 +91,6 @@ window.addEventListener('keydown', (event) => {
     if (k.dataset[valueDataset] === event.code) {
       k.classList.add('active');
       k.classList.remove('remove');
-
-      // if (event.shiftKey) {
-      //   k.classList.add('text-transform');
-      // }
 
       behaviorKeys(event.code, k, textarea);
     }

@@ -1,6 +1,5 @@
 import KEYS from './keys.json';
 
-
 function createElement(name, classNames) {
   const element = document.createElement(name);
   if (Array.isArray(classNames)) {
