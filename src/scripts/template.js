@@ -27,8 +27,9 @@ const wrapperKeyboard = createElement('div', 'wrapper-keyboard');
 const keyboard = createElement('div', 'keyboard');
 wrapperKeyboard.append(keyboard);
 
+let lang = localStorage.lang !== undefined ? localStorage.getItem('lang') : 'En';
+console.log(lang);
 for (const value in KEYS) {
-  let lang = localStorage.getItem('lang');
   const line = createElement('div', 'keyboard-line');
   KEYS[value].forEach(item => {
     const key = createElement('div', item.classList);

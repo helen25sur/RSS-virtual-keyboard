@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "lint": "eslint .  --ext .js"
+    "lint": "eslint .  --ext .js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,11 +19,12 @@
   "bugs": {
     "url": "https://github.com/helen25sur/RSS-virtual-keyboard/issues"
   },
-  "homepage": "https://github.com/helen25sur/RSS-virtual-keyboard#readme",
+  "homepage": "https://helen25sur.github.io/RSS-virtual-keyboard/",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.15.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.51.0",
