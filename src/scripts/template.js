@@ -3,9 +3,9 @@ import KEYS from './keys.json';
 function createElement(name, classNames) {
   const element = document.createElement(name);
   if (Array.isArray(classNames)) {
-    classNames.forEach(item => {
+    classNames.forEach((item) => {
       element.classList.add(item);
-    })
+    });
   } else {
     element.classList.add(classNames);
   }
@@ -27,25 +27,33 @@ const wrapperKeyboard = createElement('div', 'wrapper-keyboard');
 const keyboard = createElement('div', 'keyboard');
 wrapperKeyboard.append(keyboard);
 
-let lang = localStorage.lang !== undefined ? localStorage.getItem('lang') : 'En';
-console.log(lang);
-for (const value in KEYS) {
-  const line = createElement('div', 'keyboard-line');
-  KEYS[value].forEach(item => {
-    const key = createElement('div', item.classList);
-    key.dataset.valueEn = item.datasetValueEn;
-    key.dataset.valueGr = item.datasetValueGr !== undefined ? item.datasetValueGr : item.datasetValueEn;
+const lang = localStorage.lang !== undefined ? localStorage.getItem('lang') : 'En';
 
-    const keyV = createElement('span', 'key-value');
-    keyV.innerText = item[`keyValue${lang}`];
-    if (item.additionalValue !== undefined) {
-      key.innerHTML += `<span class="special-symbol">${item.additionalValue}</span>`;
+Object.entries(KEYS).forEach((value) => {
+  const line = createElement('div', 'keyboard-line');
+  value.forEach((lineKey) => {
+    // console.log(lineKey);
+    if (typeof lineKey === 'object') {
+      Object.entries(lineKey).forEach((item) => {
+        // console.log(item[1]);
+        const key = createElement('div', item[1].classList);
+        const kDataset = key.dataset;
+        const itemValueEn = item[1].datasetValueEn;
+        const itemValueGr = item[1].datasetValueGr;
+        kDataset.valueEn = itemValueEn;
+        kDataset.valueGr = itemValueGr !== undefined ? itemValueGr : itemValueEn;
+        const keyV = createElement('span', 'key-value');
+        keyV.innerText = item[1][`keyValue${lang}`];
+        if (item[1].additionalValue !== undefined) {
+          key.innerHTML += `<span class="special-symbol">${item[1].additionalValue}</span>`;
+        }
+        key.append(keyV);
+        line.append(key);
+      });
     }
-    key.append(keyV);
-    line.append(key);
-  })
-  keyboard.append(line);
-}
+    keyboard.append(line);
+  });
+});
 
 const pDescr = createElement('p', 'description');
 pDescr.innerHTML = 'Клавиатура создана в операционной системе Windows <br> Для переключения языка комбинация: левыe ctrl + alt';
