@@ -1,0 +1,7 @@
+:root {
+  --font-size: 1rem;
+  --font-color-hue: 128;
+  --font-color-saturation: 86%;
+  --font-color-lightness: 9%;
+  --font-color: hsl(--font-color-hue, --font-color-saturation, --font-color-lightness);
+}
