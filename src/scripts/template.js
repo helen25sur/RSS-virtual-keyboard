@@ -18,6 +18,12 @@ const title = createElement('h1', 'main-title');
 title.innerText = 'Virtual Keyboard (RS School)';
 main.append(title);
 
+const inputColor = createElement('input', 'color-input');
+inputColor.id = 'color-selection';
+inputColor.type = 'color';
+inputColor.title = 'Choose color';
+main.append(inputColor);
+
 const wrapperTextarea = createElement('div', 'wrapper-textarea');
 const textarea = createElement('textarea', 'keyboard-text');
 textarea.setAttribute('autofocus', 'true');
