@@ -1,3 +1,14 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/var.css ***!
+  \**********************************************************************/
+:root {
+  --font-size: 1rem;
+  --font-color-hue: 128;
+  --font-color-saturation: 86%;
+  --font-color-lightness: 9%;
+  --font-color: hsl(--font-color-hue, --font-color-saturation, --font-color-lightness);
+}
+
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
   \***************************************************************************************************************/
@@ -8,12 +19,12 @@
 }
 
 html {
-  font-size: 1rem;
-  color: rgb(3, 41, 8);
+  font-size: var(--font-size);
+  color: var(--font-color);
 }
 
 body {
-  background-color: #c9fbd0;
+  background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 89%);
   font-family: sans-serif;
   font-size: 18px;
 }
@@ -21,13 +32,22 @@ body {
 h1 {
   padding-top: 0.5em;
   margin-bottom: 0.5em;
-  color: #087016;
+  color: hsl(var(--font-color-hue), var(--font-color-saturation), 24%);
   text-align: center;
 }
 
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+}
+.main-content .color-input {
+  position: absolute;
+  width: 100px;
+  height: 2rem;
+  top: 4%;
+  right: 8%;
+  cursor: pointer;
 }
 .main-content .wrapper-textarea {
   width: 85%;
@@ -38,7 +58,7 @@ h1 {
   width: 100%;
   height: 150px;
   padding: 0.5em;
-  background-color: #e1fde4;
+  background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 94%);
   font-size: 1.5em;
   color: rgb(3, 41, 8);
   box-shadow: inset -3px -3px 8px;
@@ -64,13 +84,13 @@ h1 {
   height: 57px;
   border: 1px solid rgb(3, 41, 8);
   border-radius: 6px;
-  background-color: #e1fde4;
+  background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 94%);
   font-weight: bold;
   text-transform: lowercase;
   box-shadow: inset -3px -3px 3px;
 }
 .main-content .wrapper-keyboard .keyboard-line .key.active {
-  background-color: #82f691;
+  background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 74%);
 }
 .main-content .wrapper-keyboard .keyboard-line .key.remove {
   animation: animation-keys 0.5s reverse;
@@ -80,11 +100,11 @@ h1 {
 }
 @keyframes animation-keys {
   0% {
-    background-color: #e1fde4;
+    background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 94%);
     box-shadow: inset -3px -3px 3px;
   }
   100% {
-    background-color: #82f691;
+    background-color: hsl(var(--font-color-hue), var(--font-color-saturation), 74%);
     box-shadow: inset 3px 3px 3px;
   }
 }
