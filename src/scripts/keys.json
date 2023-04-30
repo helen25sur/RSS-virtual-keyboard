@@ -1,0 +1,419 @@
+{
+  "firstLine": [
+    {
+      "keyValueEn": "`",
+      "keyValueGr": "`",
+      "datasetValueEn": "Backquote",
+      "additionalValue": "~",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "1",
+      "keyValueGr": "1",
+      "datasetValueEn": "Digit1",
+      "additionalValue": "!",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "2",
+      "keyValueGr": "2",
+      "datasetValueEn": "Digit2",
+      "additionalValue": "@",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "3",
+      "keyValueGr": "3",
+      "datasetValueEn": "Digit3",
+      "additionalValue": "#",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "4",
+      "keyValueGr": "4",
+      "datasetValueEn": "Digit4",
+      "additionalValue": "$",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "5",
+      "keyValueGr": "5",
+      "datasetValueEn": "Digit5",
+      "additionalValue": "%",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "6",
+      "keyValueGr": "6",
+      "datasetValueEn": "Digit6",
+      "additionalValue": "^",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "7",
+      "keyValueGr": "7",
+      "datasetValueEn": "Digit7",
+      "additionalValue": "&",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "8",
+      "keyValueGr": "8",
+      "datasetValueEn": "Digit8",
+      "additionalValue": "*",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "9",
+      "keyValueGr": "9",
+      "datasetValueEn": "Digit9",
+      "additionalValue": "(",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "0",
+      "keyValueGr": "0",
+      "datasetValueEn": "Digit0",
+      "additionalValue": ")",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "-",
+      "keyValueGr": "-",
+      "datasetValueEn": "Minus",
+      "additionalValue": "_",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "=",
+      "keyValueGr": "=",
+      "datasetValueEn": "Equal",
+      "additionalValue": "+",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "Backspace",
+      "keyValueGr": "Backspace",
+      "datasetValueEn": "Backspace",
+      "classList": ["key", "key-backspace"]
+    }
+  ],
+  "secondLine": [
+    {
+      "keyValueEn": "Tab",
+      "keyValueGr": "Tab",
+      "datasetValueEn": "Tab",
+      "classList": ["key", "key-tab"]
+    },
+    {
+      "keyValueEn": "Q",
+      "keyValueGr": ";",
+      "datasetValueEn": "KeyQ",
+      "datasetValueGr": "Semicolon",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "W",
+      "keyValueGr": "ς",
+      "datasetValueEn": "KeyW",
+      "datasetValueGr": "KeyW",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "E",
+      "keyValueGr": "Ε",
+      "datasetValueEn": "KeyE",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "R",
+      "keyValueGr": "Ρ",
+      "datasetValueEn": "KeyR",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "T",
+      "keyValueGr": "Τ",
+      "datasetValueEn": "KeyT",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "Y",
+      "keyValueGr": "Υ",
+      "datasetValueEn": "KeyY",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "U",
+      "keyValueGr": "Θ",
+      "datasetValueEn": "KeyU",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "I",
+      "keyValueGr": "Ι",
+      "datasetValueEn": "KeyI",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "O",
+      "keyValueGr": "Ο",
+      "datasetValueEn": "KeyO",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "P",
+      "keyValueGr": "Π",
+      "datasetValueEn": "KeyP",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "[",
+      "keyValueGr": "[",
+      "datasetValueEn": "BracketLeft",
+      "additionalValue": "{",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "]",
+      "keyValueGr": "]",
+      "datasetValueEn": "BracketRight",
+      "additionalValue": "}",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "\\",
+      "keyValueGr": "\\",
+      "datasetValueEn": "Backslash",
+      "additionalValue": "|",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "Del",
+      "keyValueGr": "Del",
+      "datasetValueEn": "Delete",
+      "classList": ["key", "key-delete"]
+    }
+  ],
+  "thirdLine": [
+    {
+      "keyValueEn": "Caps Lock",
+      "keyValueGr": "Caps Lock",
+      "datasetValueEn": "CapsLock",
+      "classList": ["key", "key-caps"]
+    },
+    {
+      "keyValueEn": "A",
+      "keyValueGr": "Α",
+      "datasetValueEn": "KeyA",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "S",
+      "keyValueGr": "Σ",
+      "datasetValueEn": "KeyS",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "D",
+      "keyValueGr": "Δ",
+      "datasetValueEn": "KeyD",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "F",
+      "keyValueGr": "Φ",
+      "datasetValueEn": "KeyF",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "G",
+      "keyValueGr": "Γ",
+      "datasetValueEn": "KeyG",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "H",
+      "keyValueGr": "Η",
+      "datasetValueEn": "KeyH",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "J",
+      "keyValueGr": "Ξ",
+      "datasetValueEn": "KeyJ",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "K",
+      "keyValueGr": "Κ",
+      "datasetValueEn": "KeyK",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "L",
+      "keyValueGr": "Λ",
+      "datasetValueEn": "KeyL",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": ";",
+      "keyValueGr": ";",
+      "datasetValueEn": "Semicolon",
+      "additionalValue": ":",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "'",
+      "keyValueGr": "'",
+      "datasetValueEn": "Quote",
+      "additionalValue": "\"",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "Enter",
+      "keyValueGr": "Enter",
+      "datasetValueEn": "Enter",
+      "classList": ["key", "key-enter"]
+    }
+  ],
+  "forthLine": [
+    {
+      "keyValueEn": "Shift",
+      "keyValueGr": "Shift",
+      "datasetValueEn": "ShiftLeft",
+      "classList": ["key", "key-shift", "key-shift-left"]
+    },
+    {
+      "keyValueEn": "Z",
+      "keyValueGr": "Ζ",
+      "datasetValueEn": "KeyZ",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "X",
+      "keyValueGr": "Χ",
+      "datasetValueEn": "KeyX",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "C",
+      "keyValueGr": "Ψ",
+      "datasetValueEn": "KeyC",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "V",
+      "keyValueGr": "Ω",
+      "datasetValueEn": "KeyV",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "B",
+      "keyValueGr": "Β",
+      "datasetValueEn": "KeyB",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "N",
+      "keyValueGr": "Ν",
+      "datasetValueEn": "KeyN",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "M",
+      "keyValueGr": "Μ",
+      "datasetValueEn": "KeyM",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": ",",
+      "keyValueGr": ",",
+      "datasetValueEn": "Comma",
+      "additionalValue": "<",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": ".",
+      "keyValueGr": ".",
+      "datasetValueEn": "Period",
+      "additionalValue": ">",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "/",
+      "keyValueGr": "/",
+      "datasetValueEn": "Slash",
+      "additionalValue": "?",
+      "classList": "key"
+    },
+    {
+      "keyValueEn": "▲",
+      "keyValueGr": "▲",
+      "datasetValueEn": "ArrowUp",
+      "classList": ["key", "key-up"]
+    },
+    {
+      "keyValueEn": "Shift",
+      "keyValueGr": "Shift",
+      "datasetValueEn": "ShiftRight",
+      "classList": ["key", "key-shift", "key-shift-right"]
+    }
+  ],
+  "fifthLine": [
+    {
+      "keyValueEn": "Ctrl",
+      "keyValueGr": "Ctrl",
+      "datasetValueEn": "ControlLeft",
+      "classList": ["key", "key-ctrl", "key-ctrl-left"]
+    },
+    {
+      "keyValueEn": "Win",
+      "keyValueGr": "Win",
+      "datasetValueEn": "MetaLeft",
+      "classList": ["key", "key-win"]
+    },
+    {
+      "keyValueEn": "Alt",
+      "keyValueGr": "Alt",
+      "datasetValueEn": "AltLeft",
+      "classList": ["key", "key-alt", "key-alt-left"]
+    },
+    {
+      "keyValueEn": " ",
+      "keyValueGr": " ",
+      "datasetValueEn": "Space",
+      "classList": ["key", "key-space"]
+    },
+    {
+      "keyValueEn": "Alt",
+      "keyValueGr": "Alt",
+      "datasetValueEn": "AltRight",
+      "classList": ["key", "key-alt", "key-alt-right"]
+    },
+    {
+      "keyValueEn": "Ctrl",
+      "keyValueGr": "Ctrl",
+      "datasetValueEn": "ControlRight",
+      "classList": ["key", "key-ctrl", "key-ctrl-right"]
+    },
+    {
+      "keyValueEn": "◄",
+      "keyValueGr": "◄",
+      "datasetValueEn": "ArrowLeft",
+      "classList": ["key", "key-left"]
+    },
+    {
+      "keyValueEn": "▼",
+      "keyValueGr": "▼",
+      "datasetValueEn": "ArrowDown",
+      "classList": ["key", "key-down"]
+    },
+    {
+      "keyValueEn": "►",
+      "keyValueGr": "►",
+      "datasetValueEn": "ArrowRight",
+      "classList": "key"
+    }
+  ]
+}
